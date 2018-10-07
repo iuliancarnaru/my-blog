@@ -1,4 +1,31 @@
 extends _component/layout/layout
 
+block config
+    -
+        let title="Iulian Carnaru Blog";
+        let description="Version 1.0";
+        var colorList = {
+            'cascade' : {
+                colorNormal: '#96a5a6',
+                colorDark: '#7f8c8d'
+            },
+            'zest' : {
+                colorNormal: '#e67e22',
+                colorDark: '#d35400'
+            },
+            'buttercup' : {
+                colorNormal: '#f1c40f',
+                colorDark: '#f39c12'
+            }
+        };
+
 block content
-    h1 This is my blog!
+    h2 This is my landing page
+    p I intend to do this blog using dynamic themes
+    ul
+        each color, key in colorList
+            li
+                button.theme-button(data-color-dark=color.colorDark, data-color-normal=color.colorNormal)=key
+    script
+        include _asset/JS/color.js
+
