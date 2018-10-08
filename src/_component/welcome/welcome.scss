@@ -1,3 +1,21 @@
 .welcome__title {
-    color: var(--color-dark);
+  color: var(--color-dark);
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+    margin-top: 1rem;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.theme-button {
+  padding: 1rem 2rem;
+  border: 0;
+  color: #fff;
 }

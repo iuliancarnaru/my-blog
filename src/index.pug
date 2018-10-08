@@ -25,7 +25,11 @@ block content
     ul
         each color, key in colorList
             li
-                button.theme-button(data-color-dark=color.colorDark, data-color-normal=color.colorNormal)=key
+                button.theme-button(
+                    style=`background-color: ${color.colorDark}`,
+                    data-color-dark=color.colorDark, 
+                    data-color-normal=color.colorNormal
+                )=key
     script
         include _asset/JS/color.js
 

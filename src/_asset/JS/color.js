@@ -18,4 +18,7 @@ console.log(colorList);
 */
 
 const themeButtonList = [...document.querySelectorAll('.theme-button')];
-themeButtonList.map(themeButton => console.log(themeButton));
+themeButtonList.map(themeButton => themeButton.addEventListener('click', e => {
+    document.documentElement.style.setProperty('--color-dark', themeButton.dataset.colorDark);
+    document.documentElement.style.setProperty('--color-normal', themeButton.dataset.colorNormal);
+}));
